@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Resource {{ data.resourceId }}</h1>
+<div mat-dialog-content class="d-flex align-items-center">
+  <mat-icon *ngIf="data.available; else unavailable" class="availability-icon availability-icon--valid">check_circle_outline</mat-icon>
+  <ng-template #unavailable>
+    <mat-icon class="availability-icon availability-icon--invalid">cancel</mat-icon>
+  </ng-template>
+  This resource is {{ data.available ? 'available' : 'unavailable' }} on {{ date }}
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>OK</button>
+</div>

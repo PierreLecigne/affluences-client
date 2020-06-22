@@ -1,0 +1,28 @@
+<div class="d-flex align-items-center mb-3">
+  <mat-icon>arrow_back</mat-icon><a routerLink="/booking">Back to resources list</a>
+</div>
+<div>
+  <h1>Resource availability</h1>
+  <p>Please select a date and a schedule to check the resource availability:</p>
+  <form [formGroup]="availabilityForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field>
+          <input matInput [min]="minDate" [matDatepicker]="datePicker" formControlName="date">
+          <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+          <mat-label>Select a date</mat-label>
+      </mat-form-field>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field>
+          <mat-select formControlName="time">
+            <mat-option value="">Select a schedule</mat-option>
+            <mat-option *ngFor="let schedule of scheduler; index as i" [value]="i">{{ displayTime(schedule) }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!availabilityForm.valid" mat-raised-button color="accent">Check availability</button>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+@import 'utils';
+
+.availability-icon {
+  margin-right: $spacer / 2;
+
+  &--valid {
+    color: green;
+  }
+
+  &--invalid {
+    color: red;
+  }
+
+}
