@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Running with Docker
 
-You can start this project in a Docker container, by running `docker build` then `docker run` commands.
+You can start this project in a Docker container, by running `docker:dev:build` then `docker:dev:run` commands.
 Then, Navigate to `http://localhost:4201/`
 
 

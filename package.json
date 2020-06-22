@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "docker:dev:build": "docker build -t affluences:dev .",
+    "docker:dev:run": "docker run -v ${PWD}:/app -v /app/node_modules -p 4201:4200 --rm affluences:dev"
   },
   "private": true,
   "dependencies": {
