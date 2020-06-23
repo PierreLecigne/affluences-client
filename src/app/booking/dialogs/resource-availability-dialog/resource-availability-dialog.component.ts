@@ -19,7 +19,7 @@ export class ResourceAvailabilityDialogComponent {
     public dialogRef: MatDialogRef<ResourceAvailabilityDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
-  get date() {
+  get date(): string {
     return format(this.data.date, 'M/dd/yyyy\' at \'HH:mm');
   }
 }

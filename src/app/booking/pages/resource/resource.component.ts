@@ -34,9 +34,9 @@ export class ResourceComponent implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
     private snackBar: MatSnackBar
   ) {
-    this.minDate = new Date();
+    this.minDate = new Date(); // Set a min date to today, to prevent user to select a date in the past
     this.availabilityForm = this.formBuilder.group({
-      date: [new Date(), Validators.required],
+      date: [new Date(), Validators.required], // Set default date to today
       time: ['', Validators.required],
     });
     this.scheduler = this.buildScheduler();
@@ -98,7 +98,7 @@ export class ResourceComponent implements OnInit, OnDestroy {
     return digit.toString().length === 1 ? `0${digit}` : digit.toString();
   }
 
-  openErrorSnackBar(message: string) {
+  openErrorSnackBar(message: string): void {
     this.snackBar.open(message, 'Close', {
       duration: 5000,
     });
