@@ -5,8 +5,8 @@
   <h1>Resource {{ resourceId }} availability</h1>
   <p>Please select a date and a schedule to check the resource availability:</p>
   <form [formGroup]="availabilityForm" (ngSubmit)="onSubmit()">
-    <div class="row">
-      <div class="col-sm-4">
+    <div class="row mb-4">
+      <div class="col-md-3 d-flex align-items-center">
         <mat-form-field>
           <input matInput [min]="minDate" [matDatepicker]="datePicker" formControlName="date">
           <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
@@ -14,13 +14,18 @@
           <mat-label>Select a date</mat-label>
       </mat-form-field>
       </div>
-      <div class="col-sm-4">
+      <div class="col-md-3 d-flex align-items-center">
         <mat-form-field>
           <mat-select formControlName="time">
             <mat-option value="">Select a schedule</mat-option>
             <mat-option *ngFor="let schedule of scheduler; index as i" [value]="i">{{ displayTime(schedule) }}</mat-option>
           </mat-select>
         </mat-form-field>
+      </div>
+      <div class="col-md-3 d-flex align-items-center">
+        <mat-slide-toggle formControlName="toastrEnabled">
+          Enable toastr notification
+        </mat-slide-toggle>
       </div>
     </div>
     <button type="submit" [disabled]="!availabilityForm.valid" mat-raised-button color="accent">Check availability</button>

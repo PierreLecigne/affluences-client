@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    ToastrModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })

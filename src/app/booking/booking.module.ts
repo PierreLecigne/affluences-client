@@ -11,11 +11,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { BookingRoutingModule } from './booking-routing.module';
 import { ResourcesListComponent } from './pages/resources-list/resources-list.component';
 import { ResourceComponent } from './pages/resource/resource.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ResourceAvailabilityDialogComponent } from './dialogs/resource-availability-dialog/resource-availability-dialog.component';
 
 
@@ -35,7 +36,9 @@ import { ResourceAvailabilityDialogComponent } from './dialogs/resource-availabi
     MatButtonModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    MatSlideToggleModule,
+    FormsModule,
   ],
   providers: [MatDatepickerModule]
 })

@@ -8,6 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // Bootstrap imports -------------------------------- //
 @import '~bootstrap/scss/mixins';
 @import './common/variables';
+@import '~ngx-toastr/toastr-bs4-alert';
 
 // Material's theme import ------------------------ //
 @import './material/theming';
