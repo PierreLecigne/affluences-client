@@ -2,7 +2,7 @@
   <a routerLink="/booking" mat-button><mat-icon class="mr-2">arrow_back</mat-icon><span>Back to resources list</span></a>
 </div>
 <div>
-  <h1>Resource availability</h1>
+  <h1>Resource {{ resourceId }} availability</h1>
   <p>Please select a date and a schedule to check the resource availability:</p>
   <form [formGroup]="availabilityForm" (ngSubmit)="onSubmit()">
     <div class="row">
