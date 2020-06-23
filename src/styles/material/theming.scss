@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$affluences-palette: (
+  50: #ecf6f9,
+  100: #cfe9f0,
+  200: #afdbe7,
+  300: #8ecddd,
+  400: #76c2d5,
+  500: #5eb7ce,
+  600: #56b0c9,
+  700: #4ca7c2,
+  800: #429fbc,
+  900: #3190b0,
+  A100: #f6fdff,
+  A200: #c3efff,
+  A400: #90e2ff,
+  A700: #77dbff,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #000,
+    500: #000,
+    600: #000,
+    700: #000,
+    800: #000,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #000,
+    A700: #000,
+  )
+);
+
+$affluences-app-primary: mat-palette($affluences-palette);
+$affluences-app-accent:  mat-palette($affluences-palette, 500, 200, 900);
+$affluences-app-theme:   mat-light-theme($affluences-app-primary, $affluences-app-accent);
+@include angular-material-theme($affluences-app-theme);

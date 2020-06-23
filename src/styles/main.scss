@@ -9,6 +9,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import '~bootstrap/scss/mixins';
 @import './common/variables';
 
+// Material's theme import ------------------------ //
+@import './material/theming';
+
 @import '~bootstrap/scss/root',
   // '~bootstrap/scss/print',
   // '~bootstrap/scss/reboot',
@@ -45,3 +48,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   '~bootstrap/scss/utilities/visibility',
   '~bootstrap/scss/utilities/spacing',
   '~bootstrap/scss/utilities/sizing';
+
